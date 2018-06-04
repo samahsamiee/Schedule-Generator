@@ -1,0 +1,201 @@
+<!--
+	File Name:	home.html
+	Date Created:	5/31/18
+	Description:	Home page for the schedule generator(in development)
+-->
+
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Schedule Generator</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--Some style stuff we're gonna need more to make it look nicer-->
+		<style>
+			p{
+				color: #00000;
+			}
+			.Title{
+				font-family: "Palatino", URW Palladio L, serif;
+				font-size: 30px;
+			}
+			.inputClass{
+				font-family: "Palatino", URW Palladio L, serif;
+				font-size: 20px;
+				text-align: left;
+				padding-top: 5px
+				padding-left: 5px;
+			}
+			.smallInfo
+			{
+				font-family: "Palatino", URW Palladio L, serif;
+				font-size: 15px;
+				text-align: left;	
+			}
+			halfTab	{ padding-left: 2em; }
+			tab1 	{ padding-left: 4em; }
+		    	tab2 	{ padding-left: 8em; }
+		    	tab3 	{ padding-left: 12em; }
+		    	tab4 	{ padding-left: 16em; }
+		</style>
+
+		
+		<center>
+			<p class="Title">Schedule Generator</p>
+		</center>
+		
+		
+		<p class="inputClass">Input Classes with preferred days, time of day, professor, and location</p>
+
+		<!--Displays the course in the text box still need to save uer input somewhere-->
+		<script type="text/javascript">
+			function displayCourses()
+			{
+				
+				var major  = document.getElementById('majors').value;
+				var course = document.getElementById('course').value;
+				if(!major && !course || !major && course || major && !course) {
+					alert("Please enter your major and course number");
+						//document.getElementById('majors').style. borderColor = "red";
+				}
+				else{
+				 document.getElementById('inputting').value+=major+"-"
+				 +course+"\n";
+				//document.getElementById('adding').innerHTML +=
+				//major + "-" + course + "<br>";
+				}
+
+			}
+		</script>
+
+	<td>
+                <select name="majors" id="majors">
+                	<option value="">Choose Major:</option>
+                	<option value="AF">Air Force</option>
+                	<option value="AH">Allied Health</option>
+                	<option value="AJ">Administration of Justice</option>
+                	<option value="ANTH">Anthropology</option>
+                	<option value="ARBC">Arabic</option>
+                	<option value="ARMY">Army ROTC</option>
+                	<option value="ART">Art</option><option value="ASL">American Sign Language</option>
+                	<option value="ASTR">Astronomy</option>
+                	<option value="ATHL">Athletics</option>
+                	<option value="BA">Business Administration</option>
+                	<option value="BIOL">Biology</option>
+                	<option value="BIOT">Biotechnology</option>
+                	<option value="BRDC">Broadcasting</option>
+                	<option value="BSM">Business Supervision/Mgmt</option><option value="CAOT">Computer Apps &amp; Occup Tech</option>
+                	<option value="CFS">Consumer &amp; Family Science</option>
+                	<option value="CHEM">Chemistry</option>
+                	<option value="CHIN">Chinese</option>
+                	<option value="CHMT">Chemical Technology</option>
+                	<option value="CHS">Chicano/Latino Studies</option>
+                	<option value="CNET">Comp, Networks, Emerging Tech</option>
+                	<option value="CO">Correctional Officer</option>
+                	<option value="COMM">Communication</option>
+                	<option value="CS">Computer Science</option>
+                	<option value="DEAF">Deaf Preparatory Program</option><option value="ECS">Early Childhood Studies</option>
+                	<option value="EDUC">Education</option>
+                	<option value="ELI">English Language Institute</option>
+                	<option value="ENGI">Engineering</option>
+                	<option value="ENGL">English</option>
+                	<option value="ENVS">Environmental Studies</option>
+                	<option value="ESL">English As a Second Language</option>
+                	<option value="ETEC">Engineering Technology</option>
+                	<option value="FREN">French</option>
+                	<option value="FT">Fire Technology</option>
+                	<option value="GA">Graphic Art/Computer Graphics</option>
+                	<option value="GEOG">Geography</option>
+                	<option value="GEOL">Geology</option>
+                	<option value="HIST">History</option>
+                	<option value="HLTH">Health</option>
+                	<option value="ID">Interior Design</option>
+                	<option value="INT">Interpreter Preparation Prog</option>
+                	<option value="IS">Interdisciplinary Studies</option>
+                	<option value="JOUR">Journalism</option>
+                	<option value="JPNS">Japanese</option>
+                	<option value="KIN">Kinesiology</option>
+                	<option value="LE">Law Enforcement</option>
+                	<option value="LS">Library Science</option>
+                	<option value="LSP">Learning Skills Program</option>
+                	<option value="MATH">Mathematics</option>
+                	<option value="MM">Multimedia</option>
+                	<option value="MUS">Music</option>
+                	<option value="NUR">Nursing</option>
+                	<option value="PD">Personal Development</option>
+                	<option value="PE">Physical Education</option>
+                	<option value="PHIL">Philosophy</option>
+                	<option value="PHYS">Physics</option>
+                	<option value="PS">Political Science</option>
+                	<option value="PSY">Psychology</option>
+                	<option value="PTA">Physical Therapist Assistant</option>
+                	<option value="RE">Real Estate</option>
+                	<option value="RT">Respiratory Therapy</option>
+                	<option value="SOC">Sociology</option>
+                	<option value="SPAN">Spanish</option>
+                	<option value="TD">Theatre and Dance</option>
+                	<option value="WEX">Work Experience Education</option>
+                	<option value="WS">Gender and Women's Studies</option>
+                </select>
+         </td>
+
+         <td class="smallInfo"><tab1>Course #:<input type="text" id="course" name="course"></tab1></td>
+
+          
+         <p></p>
+
+	        Rank(1-4)<br><input type="text" id="rank" name="Rank" style="width: 10px;" />
+	        <Tab1></Tab1>
+
+
+
+	        Preferred Days:<halfTab></halfTab><input type="checkbox" name="M" value="M">M<halfTab></halfTab>
+	        <input type="checkbox" name="Tu" value="Tu">Tu<halfTab></halfTab>
+	        <input type="checkbox" name="W" value="W">W<halfTab></halfTab>
+	        <input type="checkbox" name="Th" value="Th">Th<halfTab></halfTab>
+	        <input type="checkbox" name="F" value="F">F<halfTab></halfTab>
+	        <input type="checkbox" name="S" value="S">S<halfTab></halfTab>
+
+         <br>
+
+	        <input type="text" id="rank" name="Rank" style="width: 10px;" />
+	        <Tab1></Tab1>
+	        Preferred Time: <halfTab></halfTab> <input type="checkbox" name="Morning" value="Morning">Morning<halfTab></halfTab>
+	        <input type="checkbox" name="Afternoon" value="Afternoon">Afternoon<halfTab></halfTab>
+	        <input type="checkbox" name="Evening" value="Evening">Evening<halfTab></halfTab>
+
+         <br>
+
+		<input type="text" id="rank" name="Rank" style="width: 10px;" />
+	        <Tab1></Tab1>  
+	        Preferred Prof:<halfTab></halfTab><input type="text" id="course" name="course"> 
+
+         <br>
+
+		<input type="text" id="rank" name="Rank" style="width: 10px;" />
+		<Tab1></Tab1>
+		Preferred Location: <halfTab></halfTab> <input type="checkbox" name="Fremont" value="Fremont">Fremont<halfTab></halfTab>
+		<halfTab></halfTab> <input type="checkbox" name="Newark" value="newark">Newark<halfTab></halfTab>
+
+	 <br>
+
+
+        <td><button class="smallInfo" onclick="displayCourses()">Add Course</button></td><br>
+
+        <!--<p id="adding"></p>-->
+        <p class="inputClass">Desired Classes:</p>
+        <textarea cols="30" rows="10" id="inputting"></textarea>
+
+        <p></p>
+        <center>
+        	<td><button class="smallInfo">Submit</button></td>
+        </center>
+    </body>
+</html>
+
+
+
+
